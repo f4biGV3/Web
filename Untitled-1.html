@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doçuras da Ciane</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background-color: #FFF5F7;
+    color: #4B2C20;
+    padding-top: 100px; /* Para o header fixo */
+    text-align: center; /* Centraliza textos por padrão */
+}
+
+/* 1. Header Fixo e Centralizado */
+.header-fixo {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #fff;
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column; /* Coloca logo em cima e menu embaixo se necessário */
+    align-items: center;
+}
+
+.header-fixo h1 {
+    font-size: 1.5rem;
+    color: #E275E0; /* Rosa da logo */
+    margin-bottom: 10px;
+}
+
+.header-fixo ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.header-fixo a {
+    text-decoration: none;
+    color: #4B2C20;
+    font-weight: 600;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.header-fixo a:hover {
+    color: #E275E0;
+}
+
+/* 2. Container e Títulos */
+.container {
+    padding: 60px 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.titulo-secao {
+    margin-bottom: 40px;
+    font-size: 2rem;
+}
+
+/* 3. Cards Flexbox Centralizados */
+.flex-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 20px;
+    width: 280px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.img-placeholder {
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+/* 4. Tabela Centralizada e Hover */
+.tabela-centro {
+    display: flex;
+    justify-content: center;
+}
+
+table {
+    width: 100%;
+    max-width: 700px;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden; /* Para bordas arredondadas funcionarem */
+}
+
+th {
+    background-color: #FFDCE0;
+    padding: 15px;
+}
+
+td {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+/* REQUISITO: Hover na linha da tabela */
+tr:hover {
+    background-color: #FFF5F7;
+}
+
+/* 5. Formulário Centralizado */
+.formulario-centro {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: left; /* Alinha labels à esquerda para leitura, mas o form está no centro */
+    background: #fff;
+    padding: 30px;
+    border-radius: 20px;
+}
+
+input, select, textarea {
+    margin-bottom: 20px;
+    padding: 12px;
+    border: 1px solid #FFDCE0;
+    border-radius: 8px;
+    width: 100%;
+}
+
+/* 6. Botão com Transição Suave (REQUISITO) */
+.btn-transicao {
+    background-color: #E275E0;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.5s ease; /* Transição suave de 0.5s */
+}
+
+.btn-transicao:hover {
+    background-color: #4B2C20; /* Muda para marrom no hover */
+}
+
+
+footer {
+    background-color: #4B2C20;
+    color: white;
+    padding: 40px 20px;
+    margin-top: 50px;
+}
+</style>
+<body>
+
+    <header class="header-fixo">
+        <div class="logo">
+            <h1>Doçuras da Ciane</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#cardapio">Cardápio</a></li>
+                <li><a href="#precos">Preços</a></li>
+                <li><a href="#encomendar">Encomendas</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="cardapio" class="container">
+            <h2 class="titulo-secao">Nossos Favoritos</h2>
+            <div class="flex-container">
+                <article class="card">
+                    <div class="img-placeholder"></div>
+                    <h3>Docinhos</h3>
+                    <p>Feitos com chocolate belga e muito carinho.</p>
+                    <button class="btn-transicao">Quero Provar!</button>
+                </article>
+
+                <article class="card">
+                    <div class="img-placeholder"></div>
+                    <h3>Mini Bolos</h3>
+                    <p>Deliciosas massas artesanais bem recheadas.</p>
+                    <button class="btn-transicao">Quero Provar!</button>
+                </article>
+
+                <article class="card">
+                    <div class="img-placeholder"></div>
+                    <h3>Tortas</h3>
+                    <p>O equilíbrio perfeito entre massa e recheio.</p>
+                    <button class="btn-transicao">Quero Provar!</button>
+                </article>
+            </div>
+        </section>
+
+        <section id="precos" class="container">
+            <h2 class="titulo-secao">Tabela de Preços</h2>
+            <div class="tabela-centro">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Produto</th>
+                            <th>Quantidade</th>
+                            <th>Valor</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Geladinhos</td>
+                            <td>Unidade</td>
+                            <td>R$ 6,00</td>
+                        </tr>
+                        <tr>
+                            <td>Trufas</td>
+                            <td>Unidade</td>
+                            <td>R$ 5,00</td>
+                        </tr>
+                        <tr>
+                            <td>Mini Bolos</td>
+                            <td>Unidade</td>
+                            <td>R$ 25,00</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="encomendar" class="container">
+            <h2 class="titulo-secao">Faça seu Orçamento</h2>
+            <form class="formulario-centro">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" placeholder="Seu nome aqui">
+                
+                <label for="doces">Escolha o Doce:</label>
+                <select id="doces">
+                    <option>Docinhos</option>
+                    <option>Geladinhos</option>
+                    <option>Trufas</option>
+                    <option>Mini Bolos</option>
+                </select>
+
+                <label for="msg">Mensagem:</label>
+                <textarea id="msg" placeholder="Detalhes da encomenda..."></textarea>
+                
+                <button type="submit" class="btn-transicao">Enviar Pedido</button>
+            </form>
+        </section>
+    </main>
+
+    <footer id="rod">
+        <p>© 2026 Doçuras da Ciane - Doce encanto em cada mordida.</p>
+        <p>WhatsApp | Instagram</p>
+    </footer>
+
+</body>
+</html>

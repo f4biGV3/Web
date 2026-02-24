@@ -1,0 +1,77 @@
+<html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Tabela</title>
+        
+        <style>
+            table{
+                border-collapse: collapse;
+            }
+            th,td{
+                border: 1px solid black;
+                padding: 8px;
+            }
+
+            form {
+                display: flex;
+                flex-flow: column;
+                justify-content: center;
+                align-items: start;
+                gap: 20px;
+            }
+
+            .input-group {
+                display: flex;
+            }
+
+            #card {
+                margin: 20px;
+                border-radius: 10px;
+                width: 50vw;
+                height: 50vh;
+                padding: 20px;
+                background-color: cornsilk;
+                box-shadow: 5px 5px 10px rgba(red, green, blue, alpha);
+            }
+        </style>
+    </head>
+
+    <body>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Curso</th>
+                    <th>Notas</th>
+                </tr>
+            </thead>
+            <tr>
+                <td>Fabielle</td>
+                <td>GTI</td>
+                <td>8</td>
+            </tr>
+        </table>
+
+        <div id="card">
+            <form action="https://docs.google.com/forms/d/e/1FAIpQLSd2uP77kytLE6yfsH2-2W57ZgkojE1RdQpQg3tqLE2Qbf4fCQ/formResponse" method="post">                
+                <div class="input-group">
+                    <label for="nome">Nome</label>
+                    <input type="text" name="entry.366340186" required placeholder="Seu Nome"/>
+                </div>
+
+                <div class="input-group">
+                    <label for="email">E-mail</label>
+                    <input type="text" name="entry.1969280604" required placeholder="Seu E-mail"/>
+                </div>
+
+                <div class="input-group">
+                    <label for="sugestao">Sugestão</label>
+                    <textarea name="message" name="entry.1407326046" required rows="5" cols="30"></textarea>
+                </div>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </body>
+</html>
